@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 09:07
+// AncaÇeviri — 2026-03-09 09:55
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
