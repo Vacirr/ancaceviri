@@ -6,32 +6,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="data.js"></script>
     <style>
-        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
+        :root { --neon: #ff0055; --glow: rgba(255,0,85,0.4); --bg: #0a0a0a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 100%); color: white; font-family: 'Montserrat', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .login-box { background: var(--card-bg); border: 2px solid var(--neon); border-radius: 12px; padding: 50px 40px; box-shadow: 0 0 30px var(--glow); width: 100%; max-width: 400px; text-align: center; }
-        h1 { color: var(--neon); margin-bottom: 20px; text-shadow: 0 0 10px var(--glow); }
-        input { width: 100%; padding: 12px; margin-bottom: 20px; background: rgba(255,0,85,0.05); border: 1px solid var(--neon); border-radius: 6px; color: white; }
-        .login-btn { width: 100%; padding: 15px; background: var(--neon); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        .login-btn:hover { box-shadow: 0 0 20px var(--neon); }
-        .back-link { margin-top: 20px; display: block; color: var(--neon); text-decoration: none; }
+        body { background: linear-gradient(135deg, #0a0a0a, #1a0a0f); color: white; font-family: 'Montserrat', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .box { background: #141414; border: 2px solid var(--neon); border-radius: 14px; padding: 50px 40px; box-shadow: 0 0 40px var(--glow); width: 100%; max-width: 380px; text-align: center; }
+        .box h1 { color: var(--neon); margin-bottom: 8px; font-size: 1.6em; text-shadow: 0 0 10px var(--glow); }
+        .box p { color: #555; font-size: 0.8em; margin-bottom: 30px; }
+        input { width: 100%; padding: 13px 16px; margin-bottom: 16px; background: rgba(255,0,85,0.05); border: 1px solid #333; border-radius: 8px; color: white; font-family: 'Montserrat', sans-serif; font-size: 0.95em; outline: none; transition: 0.2s; }
+        input:focus { border-color: var(--neon); box-shadow: 0 0 10px var(--glow); }
+        .btn { width: 100%; padding: 14px; background: var(--neon); color: white; border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1em; cursor: pointer; transition: 0.3s; box-shadow: 0 0 15px var(--glow); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 0 25px var(--neon); }
+        .err { color: var(--neon); font-size: 0.82em; margin-top: 10px; display: none; }
+        .back { margin-top: 22px; display: block; color: #555; text-decoration: none; font-size: 0.83em; transition: 0.2s; }
+        .back:hover { color: var(--neon); }
     </style>
 </head>
 <body>
-    <div class="login-box">
+    <div class="box">
         <h1>⚙️ Admin Paneli</h1>
-        <form id="loginForm">
-            <input type="password" id="password" placeholder="Şifreyi gir" required>
-            <button type="submit" class="login-btn">Giriş Yap</button>
-        </form>
-        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+        <p>Devam etmek için şifreyi gir</p>
+        <input type="password" id="pw" placeholder="Şifre" autofocus>
+        <button class="btn" onclick="login()">Giriş Yap</button>
+        <div class="err" id="err">❌ Hatalı şifre!</div>
+        <a href="index.html" class="back">← Ana Sayfaya Dön</a>
     </div>
     <script>
-        document.getElementById('loginForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (dataManager.login(document.getElementById('password').value)) {
-                alert('Giriş Başarılı!'); window.location.href = 'index.html';
-            } else { alert('Hatalı Şifre!'); }
+        function login() {
+            var pw = document.getElementById('pw').value;
+            if (dataManager.login(pw)) {
+                // Admin panel localhost:5055'te çalışıyor
+                window.location.href = 'http://localhost:5055';
+            } else {
+                document.getElementById('err').style.display = 'block';
+                document.getElementById('pw').value = '';
+                document.getElementById('pw').focus();
+            }
+        }
+        document.getElementById('pw').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') login();
         });
     </script>
 </body>
