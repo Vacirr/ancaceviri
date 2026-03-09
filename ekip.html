@@ -1,61 +1,28 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <title>AncaÇeviri | Ekibimiz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="data.js"></script>
-    <style>
-        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: white; font-family: 'Montserrat', sans-serif; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 10, 10, 0.95); border-bottom: 1px solid rgba(255, 0, 85, 0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
-        .logo-container { display: flex; align-items: center; gap: 15px; }
-        h1 { font-size: 1.8em; margin: 0; font-weight: 800; text-shadow: 0 0 10px var(--glow); }
-        nav { display: flex; gap: 25px; }
-        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: 0.3s; }
-        nav a:hover, nav a.active { color: var(--neon); }
-        .content { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        h2 { font-size: 2.5em; margin-bottom: 50px; text-align: center; }
-        .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .team-member { background: var(--card-bg); border: 1px solid #222; padding: 30px 20px; border-radius: 12px; width: 220px; text-align: center; transition: 0.3s; }
-        .team-member:hover { border-color: var(--neon); transform: translateY(-5px); box-shadow: 0 10px 30px var(--glow); }
-        .member-avatar { width: 70px; height: 70px; background: #222; border-radius: 50%; margin: 0 auto 15px; border: 2px solid var(--neon); display: flex; align-items: center; justify-content: center; font-size: 1.8em; }
-        .team-member h3 { margin: 0 0 5px 0; color: white; font-size: 1.1em; }
-        .member-role { margin: 0 0 15px 0; color: var(--neon); font-size: 0.85em; font-weight: 600; }
-        .member-tasks { font-size: 0.85em; color: #888; padding-top: 15px; border-top: 1px solid #222; text-align: left; }
-        footer { padding: 40px; color: #555; text-align: center; margin-top: 50px; border-top: 1px solid #111; }
-    </style>
-</head>
+<html lang="tr"><head><meta charset="UTF-8"><title>AncaÇeviri | Ekibimiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="data.js"></script>
+<style>
+:root{--n:#ff0055;--g:rgba(255,0,85,.4);--bg:#0a0a0a;--c:#141414}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:#fff;font-family:'Montserrat',sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 50px;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(255,0,85,.2);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:14px}h1{font-size:1.7em;font-weight:800}
+nav a{color:#fff;text-decoration:none;font-weight:600;margin-left:22px;transition:.2s}nav a:hover,nav a.active{color:var(--n)}
+.content{max-width:1180px;margin:0 auto;padding:38px 18px}h2{font-size:2.4em;margin-bottom:44px;text-align:center}
+.rs{margin-bottom:46px}.rh{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:11px;border-bottom:1px solid rgba(255,0,85,.18)}
+.rn{font-size:1.25em;font-weight:800}.rc{background:rgba(255,0,85,.1);border:1px solid rgba(255,0,85,.3);color:var(--n);padding:2px 11px;border-radius:16px;font-size:.78em;font-weight:700}
+.tg{display:flex;flex-wrap:wrap;gap:18px}
+.tm{background:var(--c);border:1px solid #222;padding:22px 15px;border-radius:11px;width:190px;text-align:center;transition:.25s}.tm:hover{border-color:var(--n);transform:translateY(-4px)}
+.av{width:66px;height:66px;background:#222;border-radius:50%;margin:0 auto 12px;border:2px solid var(--n);display:flex;align-items:center;justify-content:center;font-size:1.7em;overflow:hidden}
+.tm h3{margin:0 0 3px;font-size:.95em}.mr{color:var(--n);font-size:.8em;font-weight:600;margin:0 0 9px}.mt{font-size:.73em;color:#777;padding-top:7px;border-top:1px solid #222}
+footer{padding:38px;color:#555;text-align:center;border-top:1px solid #111}
+</style></head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width: 35px; border-radius: 4px;" alt="TR">
-            <h1 id="siteTitle">ANCAÇEVİRİ</h1>
-        </div>
-        <nav>
-            <a href="index.html">Ana Sayfa</a>
-            <a href="yamalar.html">Yamalar</a>
-            <a href="ekip.html" class="active">Ekibimiz</a>
-            <a href="hakkimizda.html">Hakkımızda</a>
-        </nav>
-    </header>
-    <div class="content">
-        <h2>👥 GELİŞTİRİCİ EKİBİMİZ</h2>
-        <div class="team-grid" id="teamGrid"></div>
-    </div>
-    <footer>© 2026 AncaÇeviri. Tüm hakları saklıdır.</footer>
-    <script>
-        window.addEventListener('load', () => {
-            document.getElementById('siteTitle').textContent = dataManager.getSiteTitle();
-            const team = dataManager.getTeam();
-            document.getElementById('teamGrid').innerHTML = team.map(m => `
-                <div class="team-member">
-                    <div class="member-avatar">👤</div>
-                    <h3>${m.name}</h3><p class="member-role">${m.role}</p>
-                    <div class="member-tasks"><strong>Görevler:</strong><br>${m.tasks}</div>
-                </div>`).join('');
-        });
-    </script>
-</body>
-</html>
+<header><div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width:32px;border-radius:3px"><h1 id="st">ANCAÇEVİRİ</h1></div>
+<nav><a href="index.html">Ana Sayfa</a><a href="yamalar.html">Yamalar</a><a href="ekip.html" class="active">Ekibimiz</a><a href="hakkimizda.html">Hakkımızda</a></nav></header>
+<div class="content"><h2>👥 GELİŞTİRİCİ EKİBİMİZ</h2>
+<p style='color:#666;text-align:center'>Henüz ekip üyesi eklenmedi.</p>
+</div>
+<footer>© 2026 AncaÇeviri</footer>
+<script>document.getElementById('st').textContent=dataManager.getSiteTitle();</script>
+</body></html>
