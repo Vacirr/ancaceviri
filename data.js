@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 09:03
+// AncaÇeviri — 2026-03-09 09:07
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
@@ -34,12 +34,24 @@ const DATA = {
       "screenshots": [],
       "contributors": [
         {
-          "memberId": "xoluos-mmirxen9",
-          "gameRole": "Proje Lideri"
+          "gameRole": "Proje Lideri",
+          "memberId": "xoluos-mmirxen9"
         },
         {
-          "memberId": "mete-karace-vacir-mmirvumd",
-          "gameRole": "Teşekkürler"
+          "gameRole": "Teşekkürler",
+          "memberId": "mete-karace-vacir-mmirvumd"
+        },
+        {
+          "memberId": "bendisdsgn-mmis2kkq",
+          "gameRole": "Çevirmen"
+        },
+        {
+          "memberId": "order6-mmis30ms",
+          "gameRole": "Çevirmen"
+        },
+        {
+          "memberId": "anil-mmis3cle",
+          "gameRole": "Kalite Kontrol"
         }
       ]
     }
@@ -48,25 +60,57 @@ const DATA = {
     {
       "id": "mete-karace-vacir-mmirvumd",
       "name": "Mete Karace ~ Vacir",
+      "photo": "",
+      "role": "Genel",
       "roles": [
         "Genel",
         "Çevirmen",
         "Site Yönetimi"
       ],
-      "role": "Genel",
-      "tasks": "",
-      "photo": ""
+      "tasks": ""
     },
     {
       "id": "xoluos-mmirxen9",
       "name": "Xoluos",
+      "photo": "",
+      "role": "Çevirmen",
       "roles": [
         "Çevirmen",
         "Editör",
         "Genel",
         "Genel Koordinasyon"
       ],
+      "tasks": ""
+    },
+    {
+      "id": "bendisdsgn-mmis2kkq",
+      "name": "bendisdsgn",
+      "roles": [
+        "Çevirmen",
+        "Editör",
+        "Genel"
+      ],
       "role": "Çevirmen",
+      "tasks": "",
+      "photo": ""
+    },
+    {
+      "id": "order6-mmis30ms",
+      "name": "order6",
+      "roles": [
+        "Çevirmen"
+      ],
+      "role": "Çevirmen",
+      "tasks": "",
+      "photo": ""
+    },
+    {
+      "id": "anil-mmis3cle",
+      "name": "Anıl",
+      "roles": [
+        "Kalite Kontrol"
+      ],
+      "role": "Kalite Kontrol",
       "tasks": "",
       "photo": ""
     }
