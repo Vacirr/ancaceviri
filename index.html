@@ -10,38 +10,48 @@
         :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: var(--bg); color: white; font-family: 'Montserrat', sans-serif; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 10, 10, 0.95); border-bottom: 1px solid rgba(255, 0, 85, 0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10,10,10,0.95); border-bottom: 1px solid rgba(255,0,85,0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
         .logo-container { display: flex; align-items: center; gap: 15px; }
         h1 { font-size: 1.8em; margin: 0; font-weight: 800; text-shadow: 0 0 10px var(--glow); }
         nav { display: flex; gap: 25px; }
         nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: 0.3s; }
         nav a:hover, nav a.active { color: var(--neon); }
-        .hero { padding: 120px 20px; border-bottom: 2px solid var(--neon); background: linear-gradient(to bottom, rgba(10, 10, 10, 0.1), var(--bg)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop') center/cover; text-align: center; }
-        .hero h2 { font-size: 3.5em; color: white; text-transform: uppercase; margin-bottom: 10px; text-shadow: 0 0 20px var(--glow); }
-        .hero p { font-size: 1.2em; color: #ddd; margin-bottom: 30px; }
-        .btn-primary { background: var(--neon); color: white; padding: 15px 35px; font-size: 1.1em; font-weight: 600; text-decoration: none; border-radius: 8px; transition: 0.3s; box-shadow: 0 0 15px var(--glow); display: inline-block; border: none; cursor: pointer; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 25px var(--neon); }
+        .hero { padding: 130px 20px; border-bottom: 2px solid var(--neon); background-size: cover; background-position: center; text-align: center; position: relative; }
+        .hero::before { content:''; position:absolute; inset:0; background: linear-gradient(to bottom, rgba(10,10,10,0.3), var(--bg)); }
+        .hero > * { position: relative; z-index: 1; }
+        .hero h2 { font-size: 3.5em; color: white; text-transform: uppercase; margin-bottom: 15px; text-shadow: 0 0 20px var(--glow); }
+        .hero p { font-size: 1.2em; color: #ddd; margin-bottom: 35px; }
+        .btn-primary { background: var(--neon); color: white; padding: 15px 35px; font-size: 1.1em; font-weight: 700; text-decoration: none; border-radius: 8px; transition: 0.3s; box-shadow: 0 0 15px var(--glow); display: inline-block; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--neon); }
         .section { padding: 80px 20px; background: #050505; }
-        .section h2 { font-size: 2.5em; margin-bottom: 50px; text-align: center; }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1200px; margin: auto; }
-        .card { background: var(--card-bg); border: 1px solid #222; width: 320px; border-radius: 12px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-10px); border-color: var(--neon); box-shadow: 0 15px 30px var(--glow); }
+        .section > h2 { font-size: 2.2em; margin-bottom: 50px; text-align: center; letter-spacing: 2px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; max-width: 1200px; margin: auto; padding: 0 20px; }
+        .card { background: var(--card-bg); border: 1px solid #222; width: 320px; border-radius: 12px; cursor: pointer; transition: 0.3s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-8px); border-color: var(--neon); box-shadow: 0 15px 30px var(--glow); }
         .card-img { height: 180px; background-color: #222; background-size: cover; background-position: center; border-bottom: 2px solid var(--neon); }
-        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
-        .download-badge { position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.8); color: var(--neon); padding: 5px 10px; border-radius: 8px; font-weight: 600; font-size: 0.8em; border: 1px solid var(--neon); z-index: 10; backdrop-filter: blur(5px); }
-        .progress-bar { background: #222; height: 6px; border-radius: 3px; margin: 10px 0; overflow: hidden; }
-        .progress-fill { background: var(--neon); height: 100%; box-shadow: 0 0 10px var(--neon); }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; gap: 8px; }
+        .card-body h3 { font-size: 1em; margin: 0; }
+        .download-badge { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.85); color: var(--neon); padding: 4px 10px; border-radius: 8px; font-weight: 700; font-size: 0.78em; border: 1px solid var(--neon); backdrop-filter: blur(5px); }
+        .status-badge { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 0.72em; font-weight: 700; margin-bottom: 4px; }
+        .status-done { background: rgba(0,204,102,0.15); border: 1px solid #00cc66; color: #00cc66; }
+        .status-ongoing { background: rgba(255,0,85,0.12); border: 1px solid var(--neon); color: var(--neon); }
+        .status-paused { background: rgba(255,170,0,0.12); border: 1px solid #ffaa00; color: #ffaa00; }
+        .status-waiting { background: rgba(100,100,100,0.15); border: 1px solid #555; color: #888; }
+        .progress-bar { background: #222; height: 6px; border-radius: 3px; overflow: hidden; }
+        .progress-fill { background: var(--neon); height: 100%; box-shadow: 0 0 8px var(--neon); }
+        .pct { color: var(--neon); font-size: 0.85em; font-weight: 700; }
+        .empty-state { text-align: center; color: #444; padding: 60px 20px; width: 100%; font-size: 1.1em; }
         footer { padding: 40px; color: #555; font-size: 0.9em; border-top: 1px solid #111; background: #050505; text-align: center; }
-        .admin-button { position: fixed; bottom: 20px; right: 20px; background: var(--neon); color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 0 20px var(--glow); z-index: 999; font-size: 0.9em; border: none; cursor: pointer; transition: 0.3s; }
-        .admin-button:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--neon); }
+        .admin-btn { position: fixed; bottom: 22px; right: 22px; background: var(--neon); color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 0 20px var(--glow); z-index: 999; font-size: 0.88em; transition: 0.3s; }
+        .admin-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--neon); }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width: 35px; border-radius: 4px;" alt="TR">
+        <a href="index.html" style="text-decoration:none;color:inherit"><div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width:35px;border-radius:4px;" alt="TR">
             <h1 id="siteTitle">ANCAÇEVİRİ</h1>
-        </div>
+        </div></a>
         <nav>
             <a href="index.html" class="active">Ana Sayfa</a>
             <a href="yamalar.html">Yamalar</a>
@@ -49,42 +59,58 @@
             <a href="hakkimizda.html">Hakkımızda</a>
         </nav>
     </header>
-    <section class="hero">
+
+    <section class="hero" id="hero">
         <h2 id="heroTitle">Oyunlar Artık Bizim Dilimizde</h2>
         <p id="heroDesc">Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.</p>
         <a href="yamalar.html" class="btn-primary">Tüm Yamaları Keşfet</a>
     </section>
+
     <section class="section">
         <h2>SON YAMALAR</h2>
         <div class="container" id="gameGrid"></div>
-        <div style="text-align: center; margin-top: 40px;">
+        <div style="text-align:center;margin-top:40px;">
             <a href="yamalar.html" class="btn-primary">Tüm Yamaları Gör</a>
         </div>
     </section>
+
     <footer>© 2026 AncaÇeviri. Tüm hakları saklıdır.</footer>
-    <a href="login.html" class="admin-button">⚙️ Admin</a>
+
     <script>
-        window.addEventListener('load', () => { loadGameGrid(); loadSiteInfo(); });
-        function loadSiteInfo() {
-            document.getElementById('siteTitle').textContent = dataManager.getSiteTitle();
-            document.getElementById('heroDesc').textContent = dataManager.getData().siteDesc;
+        function statusClass(s) {
+            if (!s) return 'status-ongoing';
+            const m = { 'Tamamlandı': 'status-done', 'Devam Ediyor': 'status-ongoing', 'Durduruldu': 'status-paused', 'Beklemede': 'status-waiting' };
+            return m[s] || 'status-ongoing';
         }
-        function loadGameGrid() {
-            const games = dataManager.getGames().slice(0, 2);
-            const html = games.map(game => `
-                <div class="card" onclick="window.location.href='game.html?id=${game.id}'">
-                    <div class="download-badge">📥 <span>${game.downloads || 0}</span></div>
-                    <div class="card-img" style="background-image: url('${game.image}');"></div>
-                    <div class="card-body">
-                        <h3 style="margin: 0 0 10px 0;">${game.title}</h3>
-                        <div class="progress-bar"><div class="progress-fill" style="width: ${game.completion}%;"></div></div>
-                        <span style="color:var(--neon); font-size: 0.9em; font-weight: bold;">%${game.completion} Tamamlandı</span>
-                    </div>
-                </div>
-            `).join('');
-            document.getElementById('gameGrid').innerHTML = html;
+
+        function loadSite() {
+            const d = dataManager.getData();
+            document.getElementById('siteTitle').textContent = d.siteTitle || 'ANCAÇEVİRİ';
+            document.getElementById('heroTitle').textContent = d.heroTitle || 'Oyunlar Artık Bizim Dilimizde';
+            document.getElementById('heroDesc').textContent = d.siteDesc || '';
+            if (d.heroBg) document.getElementById('hero').style.backgroundImage = "url('" + d.heroBg + "')";
         }
-        setInterval(loadGameGrid, 10000);
+
+        function loadGames() {
+            const games = dataManager.getGames().slice(0, 4);
+            if (!games.length) {
+                document.getElementById('gameGrid').innerHTML = '<div class="empty-state">Henüz yama eklenmedi.</div>';
+                return;
+            }
+            document.getElementById('gameGrid').innerHTML = games.map(function(g) {
+                return '<div class="card" onclick="location.href=\'game-' + g.id + '.html\'">'
+                    + '<div class="download-badge">📥 ' + (g.downloads || 0) + '</div>'
+                    + '<div class="card-img" style="background-image:url(\'' + (g.image || '') + '\')"></div>'
+                    + '<div class="card-body">'
+                    + '<span class="status-badge ' + statusClass(g.status) + '">' + (g.status || 'Devam Ediyor') + '</span>'
+                    + '<h3>' + g.title + '</h3>'
+                    + '<div class="progress-bar"><div class="progress-fill" style="width:' + (g.completion || 0) + '%"></div></div>'
+                    + '<span class="pct">%' + (g.completion || 0) + ' Tamamlandı</span>'
+                    + '</div></div>';
+            }).join('');
+        }
+
+        window.addEventListener('load', function() { loadSite(); loadGames(); });
     </script>
 </body>
 </html>
