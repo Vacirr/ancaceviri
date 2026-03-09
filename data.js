@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 08:56
+// AncaÇeviri — 2026-03-09 09:02
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
@@ -11,10 +11,39 @@ const DATA = {
     "Editör",
     "Kalite Kontrol",
     "Grafiker",
-    "Programcı"
+    "Programcı",
+    "Genel",
+    "Site Yönetimi",
+    "Genel Koordinasyon"
   ],
   "games": [],
-  "team": []
+  "team": [
+    {
+      "id": "mete-karace-vacir-mmirvumd",
+      "name": "Mete Karace ~ Vacir",
+      "roles": [
+        "Genel",
+        "Çevirmen",
+        "Site Yönetimi"
+      ],
+      "role": "Genel",
+      "tasks": "",
+      "photo": ""
+    },
+    {
+      "id": "xoluos-mmirxen9",
+      "name": "Xoluos",
+      "roles": [
+        "Çevirmen",
+        "Editör",
+        "Genel",
+        "Genel Koordinasyon"
+      ],
+      "role": "Çevirmen",
+      "tasks": "",
+      "photo": ""
+    }
+  ]
 };
 
 const dataManager = {
