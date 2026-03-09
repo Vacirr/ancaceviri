@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 09:58
+// AncaÇeviri — 2026-03-09 10:07
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
@@ -22,9 +22,9 @@ const DATA = {
     {
       "id": "xenogears-mmiry3c9",
       "title": "Xenogears",
-      "image": "https://cdn2.steamgriddb.com/thumb/cb11aa2e159d1760a10358f9589b8e12.jpg",
-      "details": "",
-      "translationDetails": "",
+      "image": "https://cdn.mobygames.com/covers/2583963-xenogears-playstation-front-cover.jpg",
+      "details": "Xenogears, JRPG türünün zirve noktalarından biri olarak kabul edilen, felsefe ve psikolojiyi bilimkurguyla harmanlayan kült bir yapımdır. Hikâye, hafızasını kaybetmiş genç bir ressam olan Fei Fong Wong’un, devasa bir yıkımın ardından kendi geçmişini ve insanlığın kökenlerini sorguladığı epik bir yolculuğu konu alır.",
+      "translationDetails": "Yerelleştirme çalışması 'Perfect World Build' referans alınarak yapılmıştır.",
       "completion": 0,
       "status": "Devam Ediyor",
       "lastUpdate": "2026-03-09",
@@ -70,6 +70,31 @@ const DATA = {
             "Kalite Kontrol"
           ],
           "gameRole": "Kalite Kontrol"
+        }
+      ]
+    },
+    {
+      "id": "princess-maker-2-refine-mmiu9i60",
+      "title": "Princess Maker 2 Refine",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/523000/capsule_616x353.jpg?t=1728354404",
+      "details": "Princess Maker 2 Refine, klasik yaşam simülasyonu türünün en köklü ve sevilen örneklerinden biri olan orijinal yapımın, modernize edilmiş grafiklerle yeniden karşımıza çıkan halidir. Gökyüzünden sana emanet edilen bir kızı, 10 yaşından 18 yaşına kadar eğitmek, büyütmek ve geleceğini şekillendirmek tamamen senin ellerinde.",
+      "translationDetails": "",
+      "completion": 0,
+      "status": "Devam Ediyor",
+      "lastUpdate": "2026-03-09",
+      "downloadLink": "",
+      "downloads": 0,
+      "installGuide": "",
+      "screenshots": [],
+      "contributors": [
+        {
+          "memberId": "mete-karace-vacir-mmirvumd",
+          "gameRoles": [
+            "Proje Lideri",
+            "Çevirmen",
+            "Editör"
+          ],
+          "gameRole": "Proje Lideri"
         }
       ]
     }
