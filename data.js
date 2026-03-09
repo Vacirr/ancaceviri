@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 09:02
+// AncaÇeviri — 2026-03-09 09:03
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
@@ -14,9 +14,36 @@ const DATA = {
     "Programcı",
     "Genel",
     "Site Yönetimi",
-    "Genel Koordinasyon"
+    "Genel Koordinasyon",
+    "Teşekkürler",
+    "Proje Lideri"
   ],
-  "games": [],
+  "games": [
+    {
+      "id": "xenogears-mmiry3c9",
+      "title": "Xenogears",
+      "image": "",
+      "details": "",
+      "translationDetails": "",
+      "completion": 0,
+      "status": "Devam Ediyor",
+      "lastUpdate": "2026-03-09",
+      "downloadLink": "",
+      "downloads": 0,
+      "installGuide": "",
+      "screenshots": [],
+      "contributors": [
+        {
+          "memberId": "xoluos-mmirxen9",
+          "gameRole": "Proje Lideri"
+        },
+        {
+          "memberId": "mete-karace-vacir-mmirvumd",
+          "gameRole": "Teşekkürler"
+        }
+      ]
+    }
+  ],
   "team": [
     {
       "id": "mete-karace-vacir-mmirvumd",
