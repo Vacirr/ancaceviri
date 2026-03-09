@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AncaÇeviri | Ana Sayfa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: white; font-family: 'Montserrat', sans-serif; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 10, 10, 0.95); border-bottom: 1px solid rgba(255, 0, 85, 0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        h1 { font-size: 1.8em; margin: 0; font-weight: 800; text-shadow: 0 0 10px var(--glow); }
+        nav { display: flex; gap: 25px; }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--neon); }
+        .hero { padding: 120px 20px; border-bottom: 2px solid var(--neon); background: linear-gradient(to bottom, rgba(10, 10, 10, 0.1), var(--bg)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop') center/cover; text-align: center; }
+        .hero h2 { font-size: 3.5em; color: white; text-transform: uppercase; margin-bottom: 10px; text-shadow: 0 0 20px var(--glow); }
+        .hero p { font-size: 1.2em; color: #ddd; margin-bottom: 30px; }
+        .btn-primary { background: var(--neon); color: white; padding: 15px 35px; font-size: 1.1em; font-weight: 600; text-decoration: none; border-radius: 8px; transition: 0.3s; box-shadow: 0 0 15px var(--glow); display: inline-block; border: none; cursor: pointer; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 25px var(--neon); }
+        .section { padding: 80px 20px; background: #050505; }
+        .section h2 { font-size: 2.5em; margin-bottom: 50px; text-align: center; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1200px; margin: auto; }
+        .card { background: var(--card-bg); border: 1px solid #222; width: 320px; border-radius: 12px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); border-color: var(--neon); box-shadow: 0 15px 30px var(--glow); }
+        .card-img { height: 180px; background-color: #222; background-size: cover; background-position: center; border-bottom: 2px solid var(--neon); }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .download-badge { position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.8); color: var(--neon); padding: 5px 10px; border-radius: 8px; font-weight: 600; font-size: 0.8em; border: 1px solid var(--neon); z-index: 10; backdrop-filter: blur(5px); }
+        .progress-bar { background: #222; height: 6px; border-radius: 3px; margin: 10px 0; overflow: hidden; }
+        .progress-fill { background: var(--neon); height: 100%; box-shadow: 0 0 10px var(--neon); }
+        footer { padding: 40px; color: #555; font-size: 0.9em; border-top: 1px solid #111; background: #050505; text-align: center; }
+        .admin-button { position: fixed; bottom: 20px; right: 20px; background: var(--neon); color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 0 20px var(--glow); z-index: 999; font-size: 0.9em; border: none; cursor: pointer; transition: 0.3s; }
+        .admin-button:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--neon); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width: 35px; border-radius: 4px;" alt="TR">
+            <h1 id="siteTitle">ANCAÇEVİRİ</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Ana Sayfa</a>
+            <a href="yamalar.html">Yamalar</a>
+            <a href="ekip.html">Ekibimiz</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2 id="heroTitle">Oyunlar Artık Bizim Dilimizde</h2>
+        <p id="heroDesc">Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.</p>
+        <a href="yamalar.html" class="btn-primary">Tüm Yamaları Keşfet</a>
+    </section>
+    <section class="section">
+        <h2>SON YAMALAR</h2>
+        <div class="container" id="gameGrid"></div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="yamalar.html" class="btn-primary">Tüm Yamaları Gör</a>
+        </div>
+    </section>
+    <footer>© 2026 AncaÇeviri. Tüm hakları saklıdır.</footer>
+    <a href="login.html" class="admin-button">⚙️ Admin</a>
+    <script>
+        window.addEventListener('load', () => { loadGameGrid(); loadSiteInfo(); });
+        function loadSiteInfo() {
+            document.getElementById('siteTitle').textContent = dataManager.getSiteTitle();
+            document.getElementById('heroDesc').textContent = dataManager.getData().siteDesc;
+        }
+        function loadGameGrid() {
+            const games = dataManager.getGames().slice(0, 2);
+            const html = games.map(game => `
+                <div class="card" onclick="window.location.href='game.html?id=${game.id}'">
+                    <div class="download-badge">📥 <span>${game.downloads || 0}</span></div>
+                    <div class="card-img" style="background-image: url('${game.image}');"></div>
+                    <div class="card-body">
+                        <h3 style="margin: 0 0 10px 0;">${game.title}</h3>
+                        <div class="progress-bar"><div class="progress-fill" style="width: ${game.completion}%;"></div></div>
+                        <span style="color:var(--neon); font-size: 0.9em; font-weight: bold;">%${game.completion} Tamamlandı</span>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('gameGrid').innerHTML = html;
+        }
+        setInterval(loadGameGrid, 10000);
+    </script>
+</body>
+</html>

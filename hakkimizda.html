@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>AncaÇeviri | Hakkımızda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: white; font-family: 'Montserrat', sans-serif; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 10, 10, 0.95); border-bottom: 1px solid rgba(255, 0, 85, 0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        h1 { font-size: 1.8em; margin: 0; font-weight: 800; text-shadow: 0 0 10px var(--glow); }
+        nav { display: flex; gap: 25px; }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--neon); }
+        .content { max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+        .about-box { background: var(--card-bg); border: 1px solid #222; border-radius: 15px; padding: 50px 40px; margin: 50px 0; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); font-size: 2.5em; margin-bottom: 30px; text-transform: uppercase; text-shadow: 0 0 10px var(--glow); }
+        .about-text { font-size: 1.1em; line-height: 1.8; color: #ccc; }
+        footer { padding: 40px; color: #555; text-align: center; margin-top: 50px; border-top: 1px solid #111; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width: 35px; border-radius: 4px;" alt="TR">
+            <h1 id="siteTitle">ANCAÇEVİRİ</h1>
+        </div>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="yamalar.html">Yamalar</a>
+            <a href="ekip.html">Ekibimiz</a>
+            <a href="hakkimizda.html" class="active">Hakkımızda</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="about-box">
+            <h2>Hakkımızda</h2>
+            <p class="about-text" id="aboutText"></p>
+        </div>
+    </div>
+    <footer>© 2026 AncaÇeviri. Tüm hakları saklıdır.</footer>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('siteTitle').textContent = dataManager.getSiteTitle();
+            document.getElementById('aboutText').textContent = dataManager.getAbout();
+        });
+    </script>
+</body>
+</html>

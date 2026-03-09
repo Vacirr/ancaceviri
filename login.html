@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>AncaÇeviri | Admin Giriş</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 100%); color: white; font-family: 'Montserrat', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .login-box { background: var(--card-bg); border: 2px solid var(--neon); border-radius: 12px; padding: 50px 40px; box-shadow: 0 0 30px var(--glow); width: 100%; max-width: 400px; text-align: center; }
+        h1 { color: var(--neon); margin-bottom: 20px; text-shadow: 0 0 10px var(--glow); }
+        input { width: 100%; padding: 12px; margin-bottom: 20px; background: rgba(255,0,85,0.05); border: 1px solid var(--neon); border-radius: 6px; color: white; }
+        .login-btn { width: 100%; padding: 15px; background: var(--neon); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        .login-btn:hover { box-shadow: 0 0 20px var(--neon); }
+        .back-link { margin-top: 20px; display: block; color: var(--neon); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>⚙️ Admin Paneli</h1>
+        <form id="loginForm">
+            <input type="password" id="password" placeholder="Şifreyi gir" required>
+            <button type="submit" class="login-btn">Giriş Yap</button>
+        </form>
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (dataManager.login(document.getElementById('password').value)) {
+                alert('Giriş Başarılı!'); window.location.href = 'index.html';
+            } else { alert('Hatalı Şifre!'); }
+        });
+    </script>
+</body>
+</html>

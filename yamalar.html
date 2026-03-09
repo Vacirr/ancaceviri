@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>AncaÇeviri | Türkçe Yamalar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        :root { --neon: #ff0055; --glow: rgba(255, 0, 85, 0.4); --bg: #0a0a0a; --card-bg: #141414; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: white; font-family: 'Montserrat', sans-serif; margin: 0; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(10, 10, 10, 0.95); border-bottom: 1px solid rgba(255, 0, 85, 0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        h1 { font-size: 1.8em; margin: 0; font-weight: 800; text-shadow: 0 0 10px var(--glow); }
+        nav { display: flex; gap: 25px; }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1em; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--neon); }
+        .search-container { margin: 40px auto; max-width: 500px; padding: 0 20px; }
+        #searchInput { width: 100%; padding: 15px 25px; border-radius: 30px; border: 1px solid #333; background: var(--card-bg); color: white; font-size: 1em; font-family: 'Montserrat', sans-serif; outline: none; transition: 0.3s; }
+        #searchInput:focus { border-color: var(--neon); box-shadow: 0 0 15px var(--glow); }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1200px; margin: auto; }
+        .card { background: var(--card-bg); border: 1px solid #222; width: 320px; border-radius: 12px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); border-color: var(--neon); box-shadow: 0 15px 30px var(--glow); }
+        .card-img { height: 180px; background-color: #222; background-size: cover; background-position: center; border-bottom: 2px solid var(--neon); }
+        .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .download-badge { position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.8); color: var(--neon); padding: 5px 10px; border-radius: 8px; font-weight: 600; font-size: 0.8em; border: 1px solid var(--neon); z-index: 10; backdrop-filter: blur(5px); }
+        .progress-bar { background: #222; height: 6px; border-radius: 3px; margin: 10px 0; overflow: hidden; }
+        .progress-fill { background: var(--neon); height: 100%; box-shadow: 0 0 10px var(--neon); }
+        footer { padding: 40px; color: #555; font-size: 0.9em; border-top: 1px solid #111; background: #050505; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width: 35px; border-radius: 4px;" alt="TR">
+            <h1 id="siteTitle">ANCAÇEVİRİ</h1>
+        </div>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="yamalar.html" class="active">Yamalar</a>
+            <a href="ekip.html">Ekibimiz</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+        </nav>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Hangi oyunu arıyorsun?..." onkeyup="filterGames()">
+    </div>
+    <div class="container" id="gameGrid"></div>
+    <footer>© 2026 AncaÇeviri. Tüm hakları saklıdır.</footer>
+    <script>
+        window.addEventListener('load', () => { loadGames(); document.getElementById('siteTitle').textContent = dataManager.getSiteTitle(); });
+        function loadGames() {
+            const games = dataManager.getGames();
+            const html = games.map(game => `
+                <div class="card game-card" onclick="window.location.href='game.html?id=${game.id}'">
+                    <div class="download-badge">📥 <span>${game.downloads || 0}</span></div>
+                    <div class="card-img" style="background-image: url('${game.image}');"></div>
+                    <div class="card-body">
+                        <h3 style="margin: 0 0 10px 0;">${game.title}</h3>
+                        <div class="progress-bar"><div class="progress-fill" style="width: ${game.completion}%;"></div></div>
+                        <span style="color:var(--neon); font-size: 0.9em; font-weight: bold;">%${game.completion} Tamamlandı</span>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('gameGrid').innerHTML = html;
+        }
+        function filterGames() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.game-card');
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                card.style.display = title.includes(input) ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
