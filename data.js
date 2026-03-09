@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-03-09 09:55
+// AncaÇeviri — 2026-03-09 09:58
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
@@ -22,7 +22,7 @@ const DATA = {
     {
       "id": "xenogears-mmiry3c9",
       "title": "Xenogears",
-      "image": "",
+      "image": "https://cdn2.steamgriddb.com/thumb/cb11aa2e159d1760a10358f9589b8e12.jpg",
       "details": "",
       "translationDetails": "",
       "completion": 0,
@@ -34,23 +34,41 @@ const DATA = {
       "screenshots": [],
       "contributors": [
         {
-          "gameRole": "Proje Lideri",
-          "memberId": "xoluos-mmirxen9"
+          "memberId": "xoluos-mmirxen9",
+          "gameRoles": [
+            "Proje Lideri",
+            "Çevirmen",
+            "Editör"
+          ],
+          "gameRole": "Proje Lideri"
         },
         {
-          "gameRole": "Teşekkürler",
-          "memberId": "mete-karace-vacir-mmirvumd"
+          "memberId": "mete-karace-vacir-mmirvumd",
+          "gameRoles": [
+            "Teşekkürler"
+          ],
+          "gameRole": "Teşekkürler"
         },
         {
           "memberId": "bendisdsgn-mmis2kkq",
+          "gameRoles": [
+            "Çevirmen",
+            "Editör"
+          ],
           "gameRole": "Çevirmen"
         },
         {
           "memberId": "order6-mmis30ms",
+          "gameRoles": [
+            "Çevirmen"
+          ],
           "gameRole": "Çevirmen"
         },
         {
           "memberId": "anil-mmis3cle",
+          "gameRoles": [
+            "Kalite Kontrol"
+          ],
           "gameRole": "Kalite Kontrol"
         }
       ]
@@ -85,34 +103,34 @@ const DATA = {
     {
       "id": "bendisdsgn-mmis2kkq",
       "name": "bendisdsgn",
+      "photo": "",
+      "role": "Çevirmen",
       "roles": [
         "Çevirmen",
         "Editör",
         "Genel"
       ],
-      "role": "Çevirmen",
-      "tasks": "",
-      "photo": ""
+      "tasks": ""
     },
     {
       "id": "order6-mmis30ms",
       "name": "order6",
+      "photo": "",
+      "role": "Çevirmen",
       "roles": [
         "Çevirmen"
       ],
-      "role": "Çevirmen",
-      "tasks": "",
-      "photo": ""
+      "tasks": ""
     },
     {
       "id": "anil-mmis3cle",
       "name": "Anıl",
+      "photo": "",
+      "role": "Kalite Kontrol",
       "roles": [
         "Kalite Kontrol"
       ],
-      "role": "Kalite Kontrol",
-      "tasks": "",
-      "photo": ""
+      "tasks": ""
     }
   ]
 };
