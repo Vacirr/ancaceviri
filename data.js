@@ -1,9 +1,9 @@
 // AncaÇeviri — 2026-03-09 10:07
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
-  "siteDesc": "Efsanevi oyunları en kaliteli Türkçe çevirilerle oynamak için doğru yerdesin.",
-  "heroTitle": "Oyunlar Artık Bizim Dilimizde",
-  "heroBg": "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070",
+  "siteDesc": "Çeviri değil, yerelleştirme yapıyoruz.",
+  "heroTitle": "Bu oyunları anca çevirebildik.",
+  "heroBg": "https://i.imgur.com/JQIY48k.jpeg",
   "about": "AncaÇeviri gönüllü bir çeviri topluluğudur.",
   "password": "admin123",
   "roles": [
