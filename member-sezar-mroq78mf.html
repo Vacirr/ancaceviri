@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>AncaÇeviri | Sezar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="data.js"></script>
+<style>
+:root{--n:#ff0055;--g:rgba(255,0,85,.4);--bg:#0a0a0a;--c:#141414}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:#fff;font-family:'Montserrat',sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 50px;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(255,0,85,.2);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:14px}h1{font-size:1.7em;font-weight:800}
+nav a{color:#fff;text-decoration:none;font-weight:600;margin-left:22px;transition:.2s}nav a:hover{color:var(--n)}
+.profile{max-width:760px;margin:54px auto 0;padding:0 18px;display:flex;align-items:center;gap:34px}
+.av{width:110px;height:110px;border-radius:50%;border:3px solid var(--n);background:#222;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:2.6em;flex-shrink:0}
+.wrap{max-width:760px;margin:38px auto 56px;padding:0 18px}
+.box{background:var(--c);border:1px solid #222;border-radius:11px;padding:24px;margin-bottom:20px}
+.box h3{color:var(--n);margin-bottom:16px;border-bottom:1px solid #333;padding-bottom:9px}
+.gchip{display:inline-flex;align-items:center;gap:9px;background:#1a1a1a;border:1px solid #333;border-radius:9px;padding:9px 13px;margin:5px;text-decoration:none;color:#fff;transition:.2s}.gchip:hover{border-color:var(--n)}
+.gi{width:48px;height:32px;border-radius:4px;background:#222;overflow:hidden;flex-shrink:0}.gchip b{display:block;font-weight:700;font-size:.88em}.gchip span{display:block;color:var(--n);font-size:.76em}
+footer{padding:38px;color:#555;text-align:center;border-top:1px solid #111}
+</style></head>
+<body>
+<header><div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width:32px;border-radius:3px"><h1 id="st">ANCAÇEVİRİ</h1></div>
+<nav><a href="index.html">Ana Sayfa</a><a href="yamalar.html">Yamalar</a><a href="ekip.html">Ekibimiz</a><a href="hakkimizda.html">Hakkımızda</a></nav></header>
+<div class="profile">
+<div class="av">👤</div>
+<div><h2 style="font-size:1.9em;margin-bottom:6px">Sezar</h2>
+<span style='display:inline-block;background:var(--n);padding:3px 13px;border-radius:16px;font-size:.8em;font-weight:700;margin-bottom:5px;margin-right:4px'>Çevirmen</span>
+<p style="color:#aaa;line-height:1.7"></p></div>
+</div>
+<div class="wrap"><div class="box"><h3>🎮 Katkıda Bulunduğu Çeviriler</h3>
+<div><a href="game-jade-empire-special-edition-mroq5xt0.html" class="gchip"><div class="gi"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/7110/header.jpg?t=1777494940" style="width:100%;height:100%;object-fit:cover"></div><div><b>Jade Empire™: Special Edition</b><span>Proje Lideri</span></div></a></div>
+</div></div>
+<footer>© 2026 AncaÇeviri</footer>
+<script>document.getElementById('st').textContent=dataManager.getSiteTitle();</script>
+</body></html>
