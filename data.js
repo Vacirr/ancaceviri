@@ -1,4 +1,4 @@
-// AncaÇeviri — 2026-07-18 18:08
+// AncaÇeviri — 2026-07-18 18:11
 const DATA = {
   "siteTitle": "ANCAÇEVİRİ",
   "siteDesc": "Çeviri değil, yerelleştirme yapıyoruz.",
