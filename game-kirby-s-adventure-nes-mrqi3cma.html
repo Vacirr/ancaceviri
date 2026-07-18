@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><title>AncaÇeviri | Kirby's Adventure (NES)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="data.js"></script>
+<style>
+:root{--n:#ff0055;--g:rgba(255,0,85,.4);--bg:#0a0a0a;--c:#141414}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:#fff;font-family:'Montserrat',sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 50px;background:rgba(10,10,10,.95);border-bottom:1px solid rgba(255,0,85,.2);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:14px}h1{font-size:1.7em;font-weight:800;text-shadow:0 0 10px var(--g)}
+nav a{color:#fff;text-decoration:none;font-weight:600;margin-left:22px;transition:.2s}nav a:hover{color:var(--n)}
+.hero{height:400px;background:linear-gradient(to bottom,rgba(0,0,0,.3),var(--bg)),url('https://raw.githubusercontent.com/Vacirr/ancaceviri/master/uploads/img_20260718_180652_213455.webp') center/cover;display:flex;flex-direction:column;justify-content:flex-end;padding:38px 58px;border-bottom:2px solid var(--n)}
+.hero h2{font-size:2.8em;text-shadow:0 0 20px var(--g);margin-bottom:10px}
+.badge{display:inline-block;padding:4px 13px;border-radius:18px;font-size:.8em;font-weight:700;margin:3px}
+.b1{background:var(--n)}.b2{background:#222;border:1px solid var(--n);color:var(--n)}.b3{background:#111;border:1px solid #444;color:#888}
+.wrap{max-width:980px;margin:0 auto;padding:44px 18px}
+.box{background:var(--c);border:1px solid #222;border-radius:11px;padding:26px;margin-bottom:20px}
+.box h3{color:var(--n);margin-bottom:14px;border-bottom:1px solid #333;padding-bottom:9px}
+.bar{background:#222;height:9px;border-radius:5px;overflow:hidden;margin:10px 0}.fill{background:var(--n);height:100%}
+.dlbtn{display:inline-block;background:var(--n);color:#fff;padding:13px 38px;border-radius:7px;text-decoration:none;font-weight:800;box-shadow:0 0 18px var(--g);transition:.3s}.dlbtn:hover{transform:translateY(-2px)}
+.screens{display:flex;gap:11px;flex-wrap:wrap}.screens img{width:210px;height:132px;object-fit:cover;border-radius:7px;border:1px solid #333;transition:.2s}.screens img:hover{border-color:var(--n)}
+.chip{display:inline-flex;align-items:center;gap:9px;background:#1a1a1a;border:1px solid #333;border-radius:28px;padding:7px 15px;margin:4px;text-decoration:none;color:#fff;transition:.2s}.chip:hover{border-color:var(--n)}
+.chip-av{width:30px;height:30px;border-radius:50%;border:2px solid var(--n);background:#222;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chip b{display:block;font-size:.88em}.chip span{display:block;color:var(--n);font-size:.73em}
+.txt{color:#ccc;line-height:1.8;white-space:pre-wrap}
+footer{padding:38px;color:#555;text-align:center;border-top:1px solid #111}
+</style></head>
+<body>
+<header><div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" style="width:32px;border-radius:3px"><h1 id="st">ANCAÇEVİRİ</h1></div>
+<nav><a href="index.html">Ana Sayfa</a><a href="yamalar.html">Yamalar</a><a href="ekip.html">Ekibimiz</a><a href="hakkimizda.html">Hakkımızda</a></nav></header>
+<div class="hero"><h2>Kirby's Adventure (NES)</h2><div>
+<span class="badge b1">%0 Tamamlandı</span>
+<span class="badge b2">Devam Ediyor</span>
+<span class="badge b3">Son Güncelleme: 2026-07-18</span>
+</div></div>
+<div class="wrap">
+<div class="box"><h3>📊 Çeviri Durumu</h3>
+<div class="bar"><div class="fill" style="width:0%"></div></div>
+<div style="color:var(--n);font-weight:800;font-size:1.3em">%0</div>
+
+</div>
+<div class='box'><h3>📋 Detaylar</h3><p class='txt'>Kirby's Adventure</p></div>
+<div class="box" style="text-align:center"><h3>⬇️ Yamayı İndir</h3>
+<p style="color:#888;margin-bottom:16px">📥 0 indirme</p>
+<a href="" class="dlbtn">Yamayı İndir</a></div>
+
+
+<div class='box'><h3>👥 Emeği Geçenler</h3><a href="member-xoluos-mmirxen9.html" class="chip"><div class="chip-av">👤</div><div><b>Xoluos</b><span>Editör, Çevirmen, Proje Lideri</span></div></a></div>
+</div>
+<footer>© 2026 AncaÇeviri</footer>
+<script>document.getElementById('st').textContent=dataManager.getSiteTitle();</script>
+</body></html>
